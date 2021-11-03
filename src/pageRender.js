@@ -1,4 +1,5 @@
 import './style.css';
+import octocat from './Octocat.png';
 
 function initialPageLoad() {
     
@@ -16,6 +17,9 @@ function initialPageLoad() {
 
     // Append Title and Navigation Bar to Header
     document.querySelector('header').append(title, navBar);
+
+    // Create footer
+    createFooter();
 
 }
 
@@ -44,10 +48,32 @@ function loadContent(page) {
             console.log('Menu content!');
             break;
         case 'Contact':
-            
+
             //load contact content
             break;
     }
+}
+
+function createFooter() {
+    const footer = document.querySelector('footer');
+    const text = document.createElement('small');
+    const link = document.createElement('a');
+    const img = document.createElement('input');
+    
+    text.textContent = `\u00A9 Copyright `;
+    text.textContent += new Date().getFullYear();
+    text.textContent += ', sumedh-inamdar';
+
+    link.href = 'https://github.com/sumedh-inamdar';
+    link.target = '_blank';
+    link.title = 'Link to personal Github';
+
+    img.type = "image";
+    img.alt = "Github";
+    img.src = octocat;
+    link.appendChild(img);
+
+    footer.append(text, link);
 }
 
 export { initialPageLoad, loadContent };
