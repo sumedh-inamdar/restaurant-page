@@ -1,0 +1,46 @@
+body, 
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header {
+    width: 600px;
+    max-width: 100%;
+}
+.title {
+    background-color: khaki;
+    text-align: center;
+    font-size: 3em;
+    padding: 0px 50px;
+    color: blue;
+}
+
+.navBar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px 0px;
+    justify-content: space-evenly;
+}
+
+.tab {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: lawngreen;
+    cursor: pointer;
+}
+.tab:hover {
+    background-color: hsl(90, 100%, 79%);
+}
+
+#content {
+
+}
+@media screen and (max-width: 504px) {
+    .title {
+        font-size: 2.2em;
+        padding: 0px 20px;
+    }
+}
