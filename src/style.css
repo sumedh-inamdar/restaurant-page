@@ -1,44 +1,58 @@
-body {
-    position: relative;
-    min-height: 97.8vh;
-    background:no-repeat top / cover url('./background2.jpg');
-    
+html {
+    color: #eae2b7;
+    font-family: 'Amita', cursive;
+    font-family: 'Sorts Mill Goudy', serif;
 }
 body, 
 header {
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
+
+body {
+    flex-direction: column;
+    position: relative;
+    min-height: 97.8vh;
+    background:no-repeat top / cover url('./background2.jpg');
+}
+
 header {
-    width: 600px;
+    flex-direction: row;
+    width: 900px;
+    width: 100%;
+    height: 150px;
     max-width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 .title {
-    background-color: khaki;
     text-align: center;
+    font-weight: 700;
     font-size: 3em;
+    width: 100%;
+    height: min-content;
     padding: 0px 50px;
-    color: blue;
+    color: #eae2b7;
 }
 
 .navBar {
     display: flex;
     flex-direction: row;
     width: 100%;
+    height: min-content;
     padding: 20px 0px;
-    justify-content: space-evenly;
+    padding-right: 10px;
+    justify-content:right;
 }
 
 .tab {
-    border: 1px solid black;
-    border-radius: 10px;
+    font-size: 32px;
     padding: 5px 10px;
-    background-color: lawngreen;
+    margin: 0px 10px;
     cursor: pointer;
 }
 .tab:hover {
-    background-color: hsl(90, 100%, 79%);
+    color: hsl(51, 55%, 99%);
+    transition: color 0.5s;
 }
 
 #content {
@@ -55,7 +69,6 @@ footer {
     width: 98%;
     min-width: 300px;
     height: 2rem;
-    color: hsl(28, 67%, 14%);
 }
   
 footer input {
@@ -69,6 +82,14 @@ footer input:hover {
 }
 
 @media screen and (max-width: 504px) {
+    header {
+        flex-direction: column;
+        height: min-content;
+    }
+    .navBar {
+        justify-content: center;
+    }
+
     .title {
         font-size: 2.2em;
         padding: 0px 20px;

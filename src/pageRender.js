@@ -14,6 +14,7 @@ function initialPageLoad() {
     navBar.appendChild(createTab('Home'));
     navBar.appendChild(createTab('Menu'));
     navBar.appendChild(createTab('Contact'));
+    
 
     // Append Title and Navigation Bar to Header
     document.querySelector('header').append(title, navBar);
