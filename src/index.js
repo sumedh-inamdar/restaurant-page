@@ -1,8 +1,7 @@
 
-import { initialPageLoad, loadContent } from './pageRender.js';
+import { initialPageLoad } from './pageRender.js';
 
 initialPageLoad();
-loadContent('home');
 
 
 

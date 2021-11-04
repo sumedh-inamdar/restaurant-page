@@ -1,5 +1,6 @@
 import './style.css';
 import octocat from './Octocat.png';
+import { homeContent } from './content.js'
 
 function initialPageLoad() {
     
@@ -14,13 +15,15 @@ function initialPageLoad() {
     navBar.appendChild(createTab('Home'));
     navBar.appendChild(createTab('Menu'));
     navBar.appendChild(createTab('Contact'));
-    
 
     // Append Title and Navigation Bar to Header
     document.querySelector('header').append(title, navBar);
 
     // Create footer
     createFooter();
+
+    // Load Home
+    loadContent('Home');
 
 }
 
@@ -38,10 +41,8 @@ function loadContent(page) {
     
     switch(page) {
         case 'Home':
-
-            //load home content
-            console.log('Home Content!');
-
+            // Create and add home content
+            content.appendChild(createContainer(homeContent));
             break;
         case 'Menu':
 
@@ -53,6 +54,18 @@ function loadContent(page) {
             //load contact content
             break;
     }
+}
+
+function createContainer(content) {
+    const container = document.createElement('div');
+    container.classList.add('container');
+    content.forEach(obj => {
+        const item = document.createElement(obj.el);
+        item.textContent = obj.text;
+        item.classList.add(obj.class);
+        container.appendChild(item);
+    })
+    return container;
 }
 
 function createFooter() {
@@ -77,4 +90,4 @@ function createFooter() {
     footer.append(text, link);
 }
 
-export { initialPageLoad, loadContent };
+export { initialPageLoad };
