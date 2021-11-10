@@ -120,6 +120,7 @@ function createContactContainer(contactObj) {
     
     // Add location info (left)
     const left = document.createElement('div');
+    left.classList.add('contactSection');
     contactObj.Location.forEach(obj => {
         left.appendChild(makeElement(obj));
     });
@@ -131,6 +132,7 @@ function createContactContainer(contactObj) {
 
     // Add Hours, phone number, email (right)
     const right = document.createElement('div');
+    right.classList.add('contactSection');
     contactObj.Hours.forEach(obj => {
         right.appendChild(makeElement(obj));
     });

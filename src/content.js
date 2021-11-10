@@ -170,6 +170,17 @@ contactContent.Location = [
         'el': 'p',
         'text': '1234 Sunset Blvd, San Francisco, CA',
         'class': 'text'
+    },
+    {
+        'el': 'p',
+        'text': '(415) 555-1234',
+        'class': 'text'
+    },
+    {
+        'el': 'p',
+        'text': 'contact@example.com',
+        'class': 'text'
+
     }
 ];
 contactContent.Hours = [

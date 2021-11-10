@@ -69,16 +69,15 @@ header {
     justify-content: center;
     flex-direction: column;
     max-width: 1000px;
-    /* height: 100%; */
-    /* width: 100%; */
 }
 
 .container {
     flex-direction: column;
-    width: 75%;
+    width: 85%;
+    min-width: 760px;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.4);
-    padding: 10px 30px;                  
+    padding: 10px 30px;               
 }
 .menuHeading {
     width: 100%;
@@ -105,6 +104,8 @@ hr {
     border-radius: 15px;
 }
 
+.contactSection {
+}
 footer {
     flex: 0 0 2rem;
     font-family: inherit;
@@ -126,6 +127,9 @@ footer input:hover {
 }
 
 @media screen and (max-width: 504px) {
+    .container {
+        min-width:unset;
+    }
     header {
         flex-direction: column;
         height: min-content;
