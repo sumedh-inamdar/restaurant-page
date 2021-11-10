@@ -23,7 +23,7 @@ function initialPageLoad() {
     createFooter();
 
     // Load Home
-    loadContent('Contact');
+    loadContent('Home');
 
 }
 
